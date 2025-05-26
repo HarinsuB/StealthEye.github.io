@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SLIIT Final Year Research">
+    <meta name="author" content="Devcrud">
+    <title>Stealth Eye</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h4 class="header-subtitle">Hi, Welcome to</h4>
+                <h1 class="header-title">STEALTH EYE</h1>
+                <p><h6 class="header-mono1">BEHAVIORAL ANALYSIS SYSTEM FOR FILELESS MALWARE DETECTION
+</h6></p>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        .header {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/imgs/kidHome.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        .header .container {
+            position: relative;
+            height: 100%;
+        }
+        .header .header-content {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 55%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .header .header-content .header-subtitle {
+            font-weight: 200;
+            font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+        }
+        .header .header-content .header-title {
+            font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+            font-weight: bold;
+            line-height: .7;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #ff6f00, #ff7f00, #F85C70, #F85C70, #F85C70, #F85C70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header .header-content .header-mono {
+            letter-spacing: 5px;
+            font-weight: 500;
+            font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+            margin-bottom: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #fff;
+            animation: typing 9s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+        }
+        .header .header-content .header-mono1 {
+            letter-spacing: 2px;
+            font-weight: 300;
+            font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+            margin-bottom: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 0; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        @media (max-width: 767.98px) {
+            .header {
+                height: 500px;
+                min-height: 500px;
+            }
+            .header .header-content {
+                padding: 20px;
+            }
+            .header .header-content .header-mono {
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#research" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#soluion" class="nav-link">Solution</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#doc" class="nav-link">Documents & Presentations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#results" class="nav-link">Results</a>
+                </li>
+                <li class="nav-item last-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+            
+
+
+
+        </div>
+    </div>
+
+    <!--Resume Section-->
+<section class="section" id="research" style="padding-top: 50px; padding-bottom: 50px; background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="mb-5" style="text-align: center; color: #2c3e50; font-weight: 600; font-size: 2.5rem;"><span class="text-danger">Our</span> Research</h2>
+       
+<style>
+  .animated-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 400px;
+    animation: 
+      fadeSlideIn 1.2s ease forwards,
+      typing 9s steps(40, end) infinite,
+      blink-caret 0.75s step-end infinite;
+    background: linear-gradient(to right, #ff6f00, #ff7f00, #F85C70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #F85C70;
+    letter-spacing: 1.5px;
+  }
+
+  @keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #F85C70; }
+  }
+</style>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div>
+      <div>
+        <div class="mt-2">
+          <h6 style="margin-bottom: 12px; padding-left: 5px; color: #6c757d; font-size: 1rem; font-weight: 500;">
+            Project Scope
+          </h6>
+          <h4 style="margin-bottom: 0; color: #2d3e50; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.5px;">
+            Literature Survey
+          </h4>
+          <span class="line" style="display: inline-block; width: 90px; height: 4px; background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%); margin-top: 1rem; border-radius: 2px;"></span>
+        </div>
+      </div>
+      <div class="card-body" style="padding: 25px 30px;">
+        <div class="row align-items-stretch">
+          <div class="">
+            <p class="subtitle" style="line-height: 1.75; color: #5a6268; margin-bottom: 1.25rem; font-size: 1rem; text-align: justify;">
+              Fileless malware is a significant cybersecurity threat as it is entirely present in system memory and evades traditional signature-based detection methods. This paper introduces STEALTH EYE, an endpoint behavioral analysis framework for detecting fileless malware, such as ransomware, spyware, trojans, and RedLine Stealer, in real time. The framework utilizes an endpoint agent that monitors system activity in real time and captures snapshots of behavior every 60 seconds for real- time threat analysis. These captures track memory injections, DLL loading and execution, file and handle operations, service activity, process and thread behavior, registry modifications, network communications, cryptographic function usage, keystroke logging, and clipboard access. The data that is collected is analyzed through supervised machine learning mechanisms to detect patterns that indicate fileless malware activity. In contrast to traditional post-infection forensic approaches, STEALTH EYE provides real-time monitoring, notification, and active response with enhanced cybersecurity resilience against the widespread fileless attacks.
+            </p>
+
+            <h6 style="font-weight: 700; margin-top: 30px; margin-bottom: 18px; color: #343a40; border-bottom: 2px solid #e0e0e0; padding-bottom: 12px; font-size: 1.15rem;">References</h6>
+            <p class="subtitle" style="line-height: 1.7; color: #5a6268; margin-bottom: 0.6rem; font-size: 0.75rem; text-align: justify;">[1] M. Hanchenko and S. Gakhov, ”Analysis of Methods for Detecting Fileless Malware in the Energy-Dependent Memory of an Organisation’s Information System Assets,” Ricerche scientifiche e metodi della loro realizzazione: esperienza mondiale e realta` domestiche, vol. 16, Apr. 2024. DOI: 10.36074/logos-26.04.2024.054</p>
+            <p class="subtitle" style="line-height: 1.7; color: #5a6268; margin-bottom: 0.6rem; font-size: 0.75rem; text-align: justify;">[2] J. Bejjam, B. Sai Devansh, R. Divya Reddy, M. Vaishnavi, and S. Ravu- lakolla, ”Unveiling the Veiled: Unmasking Fileless Malware through Memory Forensics and Machine Learning,” Int. J. Recent Innov. Trends Comput. Commun. (IJRITCC), vol. 11, no. 9, pp. 3691-3695, Sep. 2023.</p>
+            <p class="subtitle" style="line-height: 1.7; color: #5a6268; margin-bottom: 0.6rem; font-size: 0.75rem; text-align: justify;">[3] P. Borana, V. Sihag, G. Choudhary, M. Vardhan, and P. Singh, ”An Assistive Tool for Fileless Malware Detection,” Proc. World Automation Congress (WAC-2021), Online, Aug. 2021.</p>
+            <p class="subtitle" style="line-height: 1.7; color: #5a6268; margin-bottom: 0.6rem; font-size: 0.75rem; text-align: justify;">[4] O. Khalid, S. Ullah, T. Ahmad, S. Saeed, D. A. Alabbad, M. Aslam, A. Buriro, and R. Ahmad, ”An Insight into the Machine-Learning-Based Fileless Malware Detection,” Sensors, vol. 23, no. 612, pp. 1-20, Jan. 2023. DOI: 10.3390/s23020612</p>
+          </div>
+          <div class="col-md-1 d-none d-md-flex justify-content-center align-items-center px-0 mx-2">
+            <div style="width: 2px; background-color: #ced4da; height: 90%;"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="mt-5 text-end mb-2">
+      <h4 style="margin-bottom: 0; color: #343a40; font-size: 1.9rem; font-weight: 600;">Research Gap</h4>
+      <span class="line" style="display: inline-block; width: 90px; height: 4px; background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%); margin-top: 1rem; border-radius: 2px;"></span>
+    </div>
+
+    <div class="card-body" style="padding: 25px 30px;">
+      <div class="row g-4">
+
+        <!-- Row 1 -->
+        <div class="col-12">
+          <div class="row g-4">
+
+            <!-- Gap 1 -->
+            <div class="col-lg-6">
+              <div class="research-card h-100">
+                <div class="research-content">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                  </div>
+                  <div class="text-content">
+                    <h6>Limited Real-Time Detection Capabilities</h6>
+                    <p>
+                      Although existing studies provide valuable insights into fileless ransomware, trojans, and spyware, most focus on post-infection analysis or static detection methods. There is a critical gap in the development of proactive, real-time detection systems that can continuously monitor system behavior and detect threats as they occur.
+                    </p>
+                  </div>
+                </div>
+                <div class="divider-right"></div>
+              </div>
+            </div>
+
+            <!-- Gap 2 -->
+            <div class="col-lg-6">
+              <div class="research-card h-100">
+                <div class="research-content">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                  </div>
+                  <div class="text-content">
+                    <h6>Reactive vs. Proactive Strategies</h6>
+                    <p>
+                      Current detection techniques, such as memory forensics and static signature analysis, are largely reactive—responding after malware has executed. These approaches fail to provide immediate threat mitigation. There is a need for dynamic, real-time solutions that leverage machine learning to identify behavioral anomalies early and prevent attacks before damage is done.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="col-12">
+          <div class="divider-horizontal"></div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-12">
+          <div class="row g-4">
+
+            <!-- Gap 3 -->
+            <div class="col-lg-6">
+              <div class="research-card h-100">
+                <div class="research-content">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-diagram-3-fill"></i>
+                  </div>
+                  <div class="text-content">
+                    <h6>Narrow Platform Focus</h6>
+                    <p>
+                      Many studies focus solely on the Windows environment or specific attack stages like persistence, overlooking malware behaviors across the full lifecycle and in cross-platform contexts. This creates a gap in developing detection methods that can generalize across diverse operating systems and network environments.
+                    </p>
+                  </div>
+                </div>
+                <div class="divider-right"></div>
+              </div>
+            </div>
+
+            <!-- Gap 4 -->
+            <div class="col-lg-6">
+              <div class="research-card h-100">
+                <div class="research-content">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <div class="text-content">
+                    <h6>Lack of Integrated Behavioral Analysis</h6>
+                    <p>
+                      While research has explored rule-based systems and specific tools (e.g., YARA, MSF Venom), few integrate continuous behavioral monitoring with adaptive machine learning models. There is a pressing need for unified detection frameworks that evolve with emerging threats, especially those that use advanced evasion techniques like mimicry, process splitting, and memory-only execution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .research-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(220, 53, 69, 0.15);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(220, 53, 69, 0.1);
+  }
+
+  .research-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff5f5;
+    border-radius: 50%;
+    border: 2px solid #f8d7da;
+  }
+
+  .icon-wrapper i {
+    font-size: 2.5rem;
+    color: #dc3545;
+  }
+
+  .text-content h6 {
+    font-weight: 600;
+    color: #343a40;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .text-content p {
+    line-height: 1.7;
+    color: #5a6268;
+    font-size: 0.92rem;
+    margin: 0;
+  }
+
+  .divider-right::after {
+    content: '';
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    border-left: 1px solid rgba(206, 212, 218, 0.5);
+  }
+
+  .divider-horizontal {
+    height: 1px;
+    border-top: 1px solid rgba(206, 212, 218, 0.5);
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 992px) {
+    .divider-right::after {
+      display: none;
+    }
+
+    .research-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .icon-wrapper {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div>
+<div style="text-align: left; margin-top: 6rem;">
+  <h4 style="margin-bottom: 0; color: #2d3e50; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.5px;">
+    Research Problem
+  </h4>
+  <span style="display: inline-block; width: 90px; height: 4px; background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%); margin-top: 1rem;"></span>
+</div>
+
+      <div class="card-body" style="padding: 25px 30px;">
+        <div class="row align-items-stretch">
+          
+
+          <!-- Divider (optional) -->
+          <div class="col-md-1 d-none d-md-flex justify-content-center align-items-center px-0 mx-2">
+            <div style="width: 2px; background-color: #ced4da; height: 90%;"></div>
+          </div>
+
+          <!-- Content on Right -->
+<div class="" style="text-align: justify; margin-top: 2.5rem;"> <!-- Added margin-top -->
+  
+  <p class="subtitle" style="line-height: 1.75; color: #5a6268; margin-bottom: 1.25rem; font-size: 1rem;">
+Fileless malware represents a significant evolution in cyber threats, operating entirely within system memory and leveraging legitimate tools such as PowerShell, Windows Management Instrumentation (WMI), scheduled tasks, and system registries to carry out malicious activities. Unlike traditional malware, fileless variants do not leave behind identifiable files on disk, making them extremely difficult to detect using conventional signature-based or file-centric security solutions.
+
+These attacks pose a critical challenge to existing cybersecurity frameworks, which are often reactive and rely heavily on post-infection analysis or persistent file indicators. Fileless malware variants such as ransomware, information stealers, spyware, and trojans exploit the trusted nature of native system processes to execute harmful actions, including data encryption, credential harvesting, system manipulation, and unauthorized surveillance.
+
+The stealthy nature of fileless attacks allows them to bypass many traditional detection mechanisms, often blending in with normal system activity and remaining undetected until significant damage has been done. Existing security solutions frequently lack the capability to monitor real-time memory activity or identify subtle behavioral anomalies that characterize fileless threats.
+
+This research aims to address the limitations of traditional detection methods by investigating the behavioral characteristics of various types of fileless malware. The objective is to design and propose a proactive, real-time detection approach capable of identifying malicious activity based on in-memory behavior and process-level anomalies. Such an approach is essential to enhance the effectiveness of cybersecurity defenses against the growing complexity and persistence of fileless malware attacks.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="font-family: 'Segoe UI', system-ui, sans-serif;">
+<style>
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes accentSlide {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+    }
+
+        .equal-height-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .equal-height-card .card-body {
+        flex: 1 1 auto;
+    }
+    
+    .objective-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        animation: fadeInUp 0.8s ease-out;
+        background: white;
+    }
+    
+    .objective-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(6, 46, 244, 0.194);
+    }
+    
+    .accent-line {
+        width: 90px;
+        height: 4px;
+        background: linear-gradient(90deg, #3c45e7 0%, #646cff 100%);
+        margin: 0 auto;
+        animation: accentSlide 0.6s ease-out;
+    }
+    
+    .section-header {
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        margin-bottom: 2rem;
+    }
+    
+    .content-card {
+        background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .card-title {
+        color: #2d3e50;
+        font-weight: 700;
+        transition: color 0.3s ease;
+    }
+    
+    .card:hover .card-title {
+        color: #3c45e7;
+    }
+    
+    .divider {
+        width: 60px;
+        height: 3px;
+        background: #3c45e7;
+        border-radius: 2px;
+        margin: 1rem 0;
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+    
+    .card:hover .divider {
+        transform: scaleX(1.2);
+    }
+</style>
+
+<div class="row">
+  <div class="col-lg-12">
+    <!-- Main Objective Section -->
+    <div class="section-header" style="margin-bottom: 25px;">
+      <div style="padding: 2rem 2rem 1rem; border-bottom: none;">
+        <div class="text-center">
+          <h4 style="font-size: 1.8rem; margin-bottom: 1.25rem; letter-spacing: -0.25px;" class="card-title">
+            Main Objective
+          </h4>
+          <div class="accent-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="objective-card content-card" style="margin-bottom: 35px;">
+      <div class="card-body" style="padding: 2.5rem;">
+        <p style="color: #4a5568; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0; text-align: justify;">
+          The main objective of this research is to develop a comprehensive and proactive detection framework capable of identifying four specific types of fileless malware—ransomware, RedLine Stealer, spyware, and trojans—through real-time behavioral and memory-based analysis. The proposed system aims to detect malicious activities that occur entirely within system memory, without generating traditional file-based signatures, thereby enhancing early threat detection and improving the overall security posture against stealthy and persistent fileless attacks.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Specific Objectives Section -->
+ <div class="section-header">
+  <div style="padding: 2rem 2rem 1rem;">
+    <div class="text-center">
+      <h4 style="font-size: 1.4rem; margin-bottom: 1.25rem; letter-spacing: -0.25px;" class="card-title">
+        Specific Objectives
+      </h4>
+      <div class="accent-line" style="background: linear-gradient(90deg, #e74c3c 0%, #ff6b6b 100%);"></div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid px-lg-5" style="margin-top: 1.5rem;">
+  <div class="row gx-4 gy-4">
+    <!-- Card 1 -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column" style="display: flex; flex-direction: column;">
+      <div class="objective-card equal-height-card">
+        <div class="card-header bg-white" style="border-bottom: 2px solid #f0f0f0; padding: 1.5rem;">
+          <h5 class="card-title" style="font-size: 1.1rem; line-height: 1.4; margin-bottom: 1rem;">
+            Fileless Ransomware Detection
+          </h5>
+          <div class="divider"></div>
+        </div>
+        <div class="card-body" style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+          <p style="color: #6c757d; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+            This component focuses on identifying ransomware activity that operates without traditional file traces. The system is designed to monitor and detect behaviors indicative of in-memory ransomware execution. Detection parameters include monitoring registry changes for signs of suspicious activity, tracking abnormal thread creation and termination patterns, and detecting the creation of mutex objects commonly used by ransomware to prevent multiple instances. Additionally, the system analyzes system calls to identify patterns that deviate from normal behavior, which may indicate active ransomware processes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column" style="display: flex; flex-direction: column;">
+      <div class="objective-card equal-height-card">
+        <div class="card-header bg-white" style="border-bottom: 2px solid #f0f0f0; padding: 1.5rem;">
+          <h5 class="card-title" style="font-size: 1.1rem; line-height: 1.4; margin-bottom: 1rem;">
+            Fileless RedLine Stealer Detection
+          </h5>
+          <div class="divider"></div>
+        </div>
+        <div class="card-body" style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+          <p style="color: #6c757d; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+            This module targets the detection of RedLine Stealer, a memory-resident malware known for stealing credentials and exfiltrating sensitive data. The detection process involves monitoring memory usage to identify unauthorized code injections and tracking abnormal or unexpected DLL loading behaviors. It also includes monitoring for unusual network activity that could signal data exfiltration attempts, and observing cryptographic operations that may be indicative of efforts to bypass security protocols or encrypt stolen data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column" style="display: flex; flex-direction: column;">
+      <div class="objective-card equal-height-card">
+        <div class="card-header bg-white" style="border-bottom: 2px solid #f0f0f0; padding: 1.5rem;">
+          <h5 class="card-title" style="font-size: 1.1rem; line-height: 1.4; margin-bottom: 1rem;">
+            Fileless Spyware Detection
+          </h5>
+          <div class="divider"></div>
+        </div>
+        <div class="card-body" style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+          <p style="color: #6c757d; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+            The spyware detection component addresses threats that focus on surveillance and data harvesting through system memory manipulation. Detection strategies include monitoring keystroke logging and keyboard handle access, analyzing clipboard interactions for unauthorized usage, and detecting network-level data exfiltration patterns through injected DLLs. The system also tracks GUI interaction anomalies, memory injections, and thread handle activity. Further, it monitors callbacks to identify unauthorized code execution and identifies hidden processes that operate outside standard process listings to evade detection.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column" style="display: flex; flex-direction: column;">
+      <div class="objective-card equal-height-card">
+        <div class="card-header bg-white" style="border-bottom: 2px solid #f0f0f0; padding: 1.5rem;">
+          <h5 class="card-title" style="font-size: 1.1rem; line-height: 1.4; margin-bottom: 1rem;">
+            Fileless Trojan Detection
+          </h5>
+          <div class="divider"></div>
+        </div>
+        <div class="card-body" style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+          <p style="color: #6c757d; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+            This component is designed to detect fileless trojans that use stealth techniques to execute malicious payloads via system processes. Key detection parameters involve monitoring memory usage and detecting unauthorized process injections. It also tracks abnormal DLL loading and execution attempts, observes irregularities in process and thread behavior, and monitors handle activity to identify system manipulation. Additionally, the system detects hidden processes and stealth operations used by trojans to remain undetected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    </section>
+
+
+<section class="section bg-dark-2 py-5" style="background: #1a1d24;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Stats Card 1 - Days Worked -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="stats-card" style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; height: 100%;">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-container" style="width: 80px; height: 80px; background: rgba(231, 76, 60, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e74c3c" viewBox="0 0 16 16">
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+                                <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                            </svg>
+                        </div>
+                        <div class="ms-4">
+                            <h2 class="display-5 fw-bold mb-0" style="color: #e74c3c; letter-spacing: -1px;">200+</h2>
+                            <p class="mb-0 text-uppercase" style="color: #a0a7b5; font-size: 0.9rem; letter-spacing: 1px;">Days Worked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card 2 - Documents -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="stats-card" style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; height: 100%;">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-container" style="width: 80px; height: 80px; background: rgba(231, 76, 60, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e74c3c" viewBox="0 0 16 16">
+                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
+                            </svg>
+                        </div>
+                        <div class="ms-4">
+                            <h2 class="display-5 fw-bold mb-0" style="color: #e74c3c; letter-spacing: -1px;">10</h2>
+                            <p class="mb-0 text-uppercase" style="color: #a0a7b5; font-size: 0.9rem; letter-spacing: 1px;">Documents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card 3 - Presentations -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="stats-card" style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; height: 100%;">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-container" style="width: 80px; height: 80px; background: rgba(231, 76, 60, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e74c3c" viewBox="0 0 16 16">
+                                <path d="M5 6a.5.5 0 0 0-.496.438l-.5 4A.5.5 0 0 0 4.5 11h3v2.016c-.863.055-1.5.251-1.5.484 0 .276.895.5 2 .5s2-.224 2-.5c0-.233-.637-.429-1.5-.484V11h3a.5.5 0 0 0 .496-.562l-.5-4A.5.5 0 0 0 11 6H5zm2 3.78V7.22c0-.096.106-.156.19-.106l2.13 1.279a.125.125 0 0 1 0 .214l-2.13 1.28A.125.125 0 0 1 7 9.778z"/>
+                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="ms-4">
+                            <h2 class="display-5 fw-bold mb-0" style="color: #e74c3c; letter-spacing: -1px;">4</h2>
+                            <p class="mb-0 text-uppercase" style="color: #a0a7b5; font-size: 0.9rem; letter-spacing: 1px;">Presentations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milestones Card -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="stats-card" style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; height: 100%;">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-container" style="width: 80px; height: 80px; background: rgba(231, 76, 60, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#e74c3c" viewBox="0 0 16 16">
+                                <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.95 5.36q-.327-.354-.535-.708a6 6 0 1 1-5.962 0q-.208.354-.535.708a3 3 0 1 1-1.95-5.36Q2.5 1.038 2.5.5m.184 1.566q.088.16.183.331c.092.15.193.292.31.42a2 2 0 1 0 .787-.947Zm10.952 0a2 2 0 1 0 .787.947c.117-.128.218-.27.31-.42q.095-.17.183-.331ZM11 2.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM5 2.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zm3.5 3.5a.5.5 0 0 1 .5.5v5.5a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M4 5.5a.5.5 0 0 1 .5.5v5.5a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m7 0a.5.5 0 0 1 .5.5v5.5a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                        </div>
+                        <div class="ms-4">
+                            <h2 class="display-5 fw-bold mb-0" style="color: #e74c3c; letter-spacing: -1px;">8</h2>
+                            <p class="mb-0 text-uppercase" style="color: #a0a7b5; font-size: 0.9rem; letter-spacing: 1px;">Milestones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .stats-card {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: cardEntrance 0.6s ease-out forwards;
+    }
+
+    @keyframes cardEntrance {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .stats-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        background: rgba(255,255,255,0.08) !important;
+        box-shadow: 0 10px 30px rgba(231, 76, 60, 0.15);
+    }
+    
+    .icon-container {
+        transition: all 0.3s ease;
+    }
+    
+    .stats-card:hover .icon-container {
+        transform: rotate(15deg) scale(1.1);
+        filter: drop-shadow(0 4px 6px rgba(231, 76, 60, 0.3));
+    }
+
+    .stats-card:nth-child(1) { animation-delay: 0.2s; }
+    .stats-card:nth-child(2) { animation-delay: 0.4s; }
+    .stats-card:nth-child(3) { animation-delay: 0.6s; }
+    .stats-card:nth-child(4) { animation-delay: 0.8s; }
+</style>
+
+<section class="section bg-custom-gray" id="Solution">
+    <div class="container">
+        <h1 class="mb-5"><span class="text-danger">Our</span> Solution</h1>
+        <div class="row align-items-center" style="margin-top: 30px; margin-bottom: 70px;">
+            <!-- Left Column: Paragraph -->
+          <div style="text-align: justify;">
+            <p class="subtitle" style="line-height: 1.75; color: #5a6268; margin-bottom: 1.25rem; font-size: 1rem;">
+              The STEALTH EYE system is a real-time behavioral analysis and detection framework designed to identify and mitigate four types of fileless malware: ransomware, RedLine Stealer, spyware, and trojans. The system is built around four dedicated endpoint agents, each specialized for detecting one type of fileless malware. These agents continuously monitor system activities and capture behavioral snapshots every 60 seconds. The snapshots are then analyzed by machine learning models tailored to each malware type. The system incorporates real-time data collection, feature extraction, machine learning-based classification, and alerting mechanisms to proactively detect and respond to potential threats.
+The system integrates four endpoint agents, each designed to detect a specific type of fileless malware: Fileless Ransomware Agent, Fileless RedLine Stealer Agent, Fileless Spyware Agent and Fileless Trojan Agent.
+
+Each endpoint agent runs with administrative privileges on a Windows environment. Its primary function is to continuously monitor system activity, capturing snapshots of key behaviors every 60 seconds. These agents focus on low-level system parameters such as memory usage, process/thread behavior, registry modifications, DLL loading, network activity, and cryptographic operations. By monitoring these behaviors, the agents can detect anomalies indicative of fileless malware, which operates entirely in memory and avoids traditional file-based signatures.
+
+Once the behavioral snapshots are collected, the data undergoes a preprocessing phase. This includes cleaning the data, normalizing formats, and handling missing values to ensure consistency across features. Feature extraction is then performed by identifying the key behavioral patterns associated with each malware type. For example, the system extracts features such as unusual DLL loading, memory manipulation, abnormal network traffic, suspicious process/thread activities, and unauthorized registry modifications. These features form the basis of the dataset used for training the machine learning models.
+
+The extracted features are used to train four separate machine learning models, one for each malware type: ransomware, RedLine Stealer, spyware, and trojans. The models are trained using previously collected labeled datasets of system behavior, where each sample is categorized as either benign or malicious. Various machine learning algorithms, such as Logistic Regression, Decision Trees, Support Vector Machines (SVM), and ensemble methods, are evaluated during the training process. Based on performance metrics such as accuracy, precision, recall, and F1-score, the best-performing model for each malware type is selected.
+
+For example, the Random Forest classifier is commonly used for fileless ransomware, Gradient Boosting is effective for RedLine Stealer, and Random Forest is also used for detecting spyware. To address data imbalance issues, techniques like SMOTE (Synthetic Minority Over-sampling Technique) and under-sampling are applied during training to ensure that both benign and malicious samples are fairly represented.
+
+Once the models are trained, they are serialized and embedded into the corresponding endpoint agents. During real-time operation, each agent captures and processes new behavioral snapshots locally and evaluates them using the trained models. The models compute a probability score indicating the likelihood of malware activity. A custom threshold (e.g., 85%) is applied to minimize false positives and ensure that only high-confidence detections trigger alerts.
+
+When the threat probability exceeds the defined threshold, the system generates an alert, which is logged in a dedicated "alerts.json" file. The alert, along with the associated behavioral snapshot and metadata, is securely transmitted to the security team via Secure File Transfer Protocol (SFTP), ensuring the confidentiality and integrity of the data.
+
+The system includes a centralized administrative dashboard, which visualizes the incoming threat data from all endpoint agents. The dashboard displays key information such as detection timestamps, threat levels, malware categories, and contributing behavioral features. This interface enables security teams to monitor threats in real time, trace malicious behavior patterns, and take swift action when necessary.
+
+The dashboard aggregates data from all the endpoint agents, providing a comprehensive view of the status of the entire network. Security teams can analyze the threat data, investigate the behavior patterns, and take appropriate countermeasures, all from one centralized interface.
+
+            </p>
+          </div>
+
+            <!-- Separator -->
+            <div class="col-md-1 d-none d-md-block">
+                <div style="width: 2px; height: 100%; background-color: #ccc; margin: 0 auto;"></div>
+            </div>
+
+            <!-- Right Column: Image and Caption -->
+            <div class="col-md-6 text-center">
+                <img src="assets/imgs/sys.png" alt="High-level Overall System Diagram" class="img-fluid highlevel-img mb-2">
+                <figcaption class="text-muted" style="font-size: 0.9rem;">Figure 1: System overview diagram</figcaption>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+     <!-- Technologies -->
+    <section class="section" id="technologies">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">Used</span> Technologies</h2>
+            <div class="row tech-grid">
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://www.python.org/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                            <p>Python</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://www.tensorflow.org/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="TensorFlow Logo">
+                            <p>Psutil</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://opencv.org/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV Logo">
+                            <p>OpenCV</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://scikit-learn.org/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn Logo">
+                            <p>Scikit-learn</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://mediapipe.dev/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://logo.svgcdn.com/s/mediapipe-dark.svg" alt="MediaPipe Logo">
+                            <p>MediaPipe</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://reactjs.org/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo">
+                            <p>React</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://fastapi.tiangolo.com/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI Logo">
+                            <p>FastAPI</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 tech-item">
+                    <a href="https://www.mongodb.com/" target="_blank">
+                        <div class="tech-card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB Logo">
+                            <p>MongoDB</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .tech-item {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards;
+            animation-delay: calc(var(--order) * 0.2s);
+        }
+
+        .tech-card {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tech-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .tech-item p {
+            margin: 0;
+            font-size: 1rem;
+            color: #212529;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .tech-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .tech-item:hover .tech-card {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(245, 19, 48, 0.2);
+        }
+
+        .tech-item:hover img {
+            box-shadow: 0 0 15px rgba(245, 19, 48, 0.5);
+        }
+
+        .tech-item:hover p {
+            color: #f51330;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 767.98px) {
+            .tech-item img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .tech-item p {
+                font-size: 0.9rem;
+            }
+
+            .tech-card {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .tech-item img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .tech-item p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+        <!-- Milestones -->
+    <section class="section" id="milestones" style="background-color: #ffffff; padding: 60px 0; font-family: 'Arial', sans-serif;">
+        <div class="container">
+            <h2 class="mb-5 pb-4 text-center"><span class="text-danger">Our</span> Milestones</h2>
+            <div class="waveform-timeline">
+                <div class="timeline-node left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2024</div>
+                        <h3 class="timeline-title">Project Proposal</h3>
+                        <p class="timeline-desc">A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 12%;">12%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 12</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Dec 2024</div>
+                        <h3 class="timeline-title">Progress Presentation I</h3>
+                        <p class="timeline-desc">Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 15%;">15%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 15</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2025</div>
+                        <h3 class="timeline-title">Progress Presentation II</h3>
+                        <p class="timeline-desc">Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 18%;">18%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 18</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">March 2025</div>
+                        <h3 class="timeline-title">Research Paper</h3>
+                        <p class="timeline-desc">Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 10%;">10%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 10</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2025</div>
+                        <h3 class="timeline-title">Final Report</h3>
+                        <p class="timeline-desc">Final Report evaluates the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 19%;">19%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 19</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2025</div>
+                        <h3 class="timeline-title">Final Presentation & Viva</h3>
+                        <p class="timeline-desc">Viva is held individually to assess each member's contribution to the project.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 20%;">20%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 20</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2025</div>
+                        <h3 class="timeline-title">Website Assessment</h3>
+                        <p class="timeline-desc">The Website helps to promote our research project and reveals all details related to the project.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 2%;">2%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 2</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+                <div class="timeline-node right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2025</div>
+                        <h3 class="timeline-title">Logbook</h3>
+                        <p class="timeline-desc">Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 4%;">4%</div>
+                        </div>
+                        <p class="timeline-marks">Marks Allocated: 4</p>
+                    </div>
+                    <div class="node"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mb-5 {
+            margin-bottom: 3rem;
+        }    
+        .pb-4 {
+            padding-bottom: 1.5rem;
+        }
+        .text-danger {
+            color: #F85C70;
+        }
+        .timeline-node {
+            position: relative;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+        }
+        .timeline-node.left {
+            flex-direction: row;
+            padding-right: 50%;
+        }
+        .timeline-node.right {
+            flex-direction: row-reverse;
+            padding-left: 50%;
+        }
+        .node {
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border: 4px solid #F85C70;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 4px rgba(248, 92, 112, 0.3);
+            transition: all 0.3s ease;
+        }
+        .timeline-node:hover .node {
+            transform: scale(1.2);
+            border-color: #082ce1;
+            box-shadow: 0 0 0 6px rgba(35, 10, 227, 0.4);
+        }
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+        .timeline-node.left .timeline-content {
+            margin-right: 30px;
+        }
+        .timeline-node.right .timeline-content {
+            margin-left: 30px;
+        }
+        .timeline-node:hover .timeline-content {
+            box-shadow: 0 8px 25px rgba(248, 92, 112, 0.3);
+            transform: translateY(-5px);
+        }   
+        .timeline-date {
+            display: inline-block;
+            background: #F85C70;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        } 
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        } 
+        .timeline-node:hover .timeline-title {
+            color: #F85C70;
+        }
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .progress {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #F85C70, #071a96);
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+            font-size: 0.75rem;
+            line-height: 10px;
+            font-weight: bold;
+        }
+        .timeline-marks {
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .waveform-timeline {
+            position: relative;
+            margin: 0 auto;
+        }
+
+    .waveform-timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: #F85C70;
+        transform: translateX(-50%);
+        z-index: 1;
+        border-radius: 2px;
+    }
+
+    .timeline-node::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        height: 2px;
+        background: #F85C70;
+        z-index: 1;
+    }
+
+    .timeline-node.left::after {
+        left: 50%;
+        transform: translateY(-50%);
+    }
+
+    .timeline-node.right::after {
+        right: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 991px) {
+        .waveform-timeline::before {
+            left: 24px;
+            transform: none;
+        }
+        
+        .timeline-node::after {
+            display: none;
+        }
+        
+        .timeline-node {
+            padding-left: 60px !important;
+        }
+        
+        .node {
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+
+    @media (min-width: 992px) {
+        .timeline-node.left .timeline-content::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 10px 0 10px 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #fff;
+            z-index: 2;
+        }
+        
+        .timeline-node.right .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 10px 10px 10px 0;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+            z-index: 2;
+        }
+    }
+        
+        @media (max-width: 991px) {
+            
+            .timeline-node {
+                padding: 0 0 0 60px !important;
+                flex-direction: row !important;
+                margin-bottom: 40px;
+            }
+            
+            .timeline-node.left .timeline-content,
+            .timeline-node.right .timeline-content {
+                margin-left: 15px;
+                margin-right: 0;
+                max-width: 100%;
+            }
+            
+            .node {
+                position: absolute;
+                left: 24px;
+                transform: translateX(-50%);
+            }
+            
+            .timeline-node:hover .node {
+                transform: translateX(-50%) scale(1.2);
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .timeline-content {
+                padding: 15px;
+            }
+            
+            .timeline-title {
+                font-size: 1.1rem;
+            }
+            
+            .timeline-desc {
+                font-size: 0.85rem;
+            }
+            
+            .timeline-marks {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+        <!-- Documents -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <section class="section" id="doc">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">Our</span> Documents</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-alt text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Project Proposal</h5>
+                            <a href="https://drive.google.com/drive/folders/1cz2XMwpq0HK0AUPUZuPjVYeW0c-PMgE4?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-contract text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Status Document - 1</h5>
+                            <a href="https://drive.google.com/drive/folders/1GjdJzdIZyF4nVrbQi3lrNHWrDUKbf7Ex?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-powerpoint text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Progress Presentation - 1</h5>
+                            <a href="https://drive.google.com/drive/folders/1eWQrRgBukSOWWSWiRW6eNsGYTlNNBtl4?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-signature text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Research Paper</h5>
+                            <a href="https://drive.google.com/drive/folders/1DDZ_QBnBve_eGnm46N7URgp9z4cZze4i?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-powerpoint text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Progress Presentation - 2</h5>
+                            <a href="https://drive.google.com/drive/folders/1horoLZwZkOWrfUuCWx_JkJVJdFVwLitL?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-invoice text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Final Report & Presentation</h5>
+                            <a href="https://drive.google.com/drive/folders/1OvDcOqw8Hjp4WYn2FKSlL0eOe3NHqVIv?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="doc-card">
+                        <div class="doc-card-header">
+                            <i class="fas fa-file-contract text-danger"></i>
+                        </div>
+                        <div class="doc-card-body">
+                            <h5 class="doc-card-title">Status Document - 2</h5>
+                            <a href="https://drive.google.com/drive/folders/1uqTaxk2xXwcuT9mU1VV22QO0_lsesu7Q?usp=sharing" class="btn btn-outline-primary" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .doc-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .doc-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .doc-card-header {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .doc-card-header i {
+        font-size: 2.5rem;
+        color: #F85C70;
+    }
+
+    .doc-card-body {
+        padding: 20px;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .doc-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 15px;
+    }
+
+    .btn-outline-primary {
+        border-color: #F85C70;
+        color: #F85C70;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #F85C70;
+        color: #fff;
+        border-color: #F85C70;
+    }
+
+    @media (max-width: 767.98px) {
+        .doc-card-header {
+            padding: 15px;
+        }
+
+        .doc-card-header i {
+            font-size: 2rem;
+        }
+
+        .doc-card-body {
+            padding: 15px;
+        }
+
+        .doc-card-title {
+            font-size: 1.1rem;
+        }
+
+        .btn-outline-primary {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .doc-card-header {
+            padding: 12px;
+        }
+
+        .doc-card-header i {
+            font-size: 1.8rem;
+        }
+
+        .doc-card-title {
+            font-size: 1rem;
+        }
+
+        .btn-outline-primary {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+        }
+    }
+    </style>
+
+<div class="col-lg-12 about-card" style="padding: 4rem 0; background: #f8f9fa;" id="about">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .team-member-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+            width: 240px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(231, 76, 60, 0.1);
+        }
+        
+        .member-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            display: block;
+            border: 2px solid  #F85C70;
+        }
+        
+        .role-label {
+            color: #F85C70;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 auto 0.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid  #F85C70;
+        }
+        
+        .image-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0.5rem;
+        }
+        
+        .member-name {
+            font-weight: 600 !important;
+            color: #2d3e50 !important;
+            font-size: 0.95rem !important;
+            margin: 0.2rem 0 !important;
+            line-height: 1.3;
+        }
+        
+        .member-detail {
+            color: #6c757d !important;
+            font-size: 0.75rem !important;
+            line-height: 1.4;
+            margin: 0.1rem 0;
+        }
+        
+        h3.font-weight-light {
+            font-size: 1.8rem;
+            color: #2d3e50;
+            text-align: center;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .line {
+            display: block;
+            width: 60px;
+            height: 2px;
+            background:  #F85C70;
+            margin: 0 auto 2rem;
+        }
+        
+        .social-links {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-icon {
+            color: #6c757d;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .social-icon:hover {
+            color:  #F85C70;
+            transform: translateY(-2px);
+        }
+        
+        .team-member-card:nth-child(1) { animation-delay: 0.2s; }
+        .team-member-card:nth-child(2) { animation-delay: 0.4s; }
+        .team-member-card:nth-child(3) { animation-delay: 0.6s; }
+        .team-member-card:nth-child(4) { animation-delay: 0.8s; }
+        .team-member-card:nth-child(5) { animation-delay: 1.0s; }
+        .team-member-card:nth-child(6) { animation-delay: 1.2s; }
+        .team-member-card:nth-child(7) { animation-delay: 1.4s; }
+        .team-member-card:nth-child(8) { animation-delay: 1.6s; }
+    </style>
+
+    <h3 class="font-weight-light">Meet Our Team</h3>
+    <span class="line mb-5"></span>
+    <div class="container">
+        <div class="row justify-content-center g-2">
+            <!-- Supervisor -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/Mr.Kavinga.jpg" alt="Supervisor" class="member-img">
+                        <p class="role-label">Supervisor</p>
+                        <p class="member-name">Mr. Kavinga Yapa Abeywardena</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Computer Systems Engineering</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/kavinga-yapa-abeywardena-a1386361/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:kavinga.y@sliit.lk" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-supervisor -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/Ms.Ayesha.jpg" alt="Co-supervisor" class="member-img">
+                        <p class="role-label">Co-supervisor</p>
+                        <p class="member-name">Ms. Ayesha Wijesooriya</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Computer Systems Engineering</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ayesha-wijesooriya-20b78717b/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:ayesha.w@sliit.lk" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Leader -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/harinsu.jpg" alt="Team Leader" class="member-img">
+                        <p class="role-label">Team Leader</p>
+                        <p class="member-name">Bandara H.M.H.M</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Information Technology</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/harinsu-bandara-a3738b203/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:harinsu89@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/ayeshani.jpg" alt="Team Member" class="member-img">
+                        <p class="role-label">Team Member</p>
+                        <p class="member-name"> Ayeshani K.M.N</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Information Technology</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/navodya-ayeshani/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:ayeshani19@outlook.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/madhushika.jpg" alt="Team Member" class="member-img">
+                        <p class="role-label">Team Member</p>
+                        <p class="member-name">Kumari M.M.P.M</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Information Technology</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/madhushika-prabhashani-768348253/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:madhushikaprabhashani99@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="team-member-card">
+                    <div class="image-wrapper">
+                        <img src="assets/imgs/suchira.jpg" alt="Team Member" class="member-img">
+                        <p class="role-label">Team Member</p>
+                        <p class="member-name">Wijerathna D.M.S.T</p>
+                        <p class="member-detail">Sri Lanka Institute of Information Technology (SLIIT)</p>
+                        <p class="member-detail">Department of Information Technology</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/suchira-theun-wijerathna-2473b7215/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:suchiratheunwijerathna@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    <!-- Contact Us -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="mb-3 contact-title"><span class="text-danger">Contact</span> Us</h2>
+            <h4 class="mb-5">Get In Touch</h4>
+            <div class="row">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="contact-form-card">
+                        <form>
+                            <div class="form-group mb-4">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="message">Message or Query</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Type your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info-card text-center mt-5">
+                <h5>Contact Details</h5>
+                <p class="mb-2">For further queries please reach us at <a href="mailto:stealtheye@gmail.com">stealtheye@gmail.com</a></p>
+                <p class="mb-2">Hope this project helped you in some manner. Thank you!</p>
+                <p class="font-weight-bold">- Team Stealth Eye</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .contact-form-card {
+        padding: 35px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form-card .form-control {
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact-form-card .form-control:focus {
+        border-color: #F85C70;
+        box-shadow: 0 0 5px rgba(248, 92, 112, 0.3);
+        outline: none;
+    }
+
+    .contact-form-card label {
+        font-weight: 600;
+        color: #212529;
+    }
+
+    .contact-form-card .btn-primary {
+        background-color: #F85C70;
+        border-color: #F85C70;
+        font-weight: 600;
+        padding: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form-card .btn-primary:hover {
+        background-color: #f51330;
+        border-color: #f51330;
+    }
+
+    .contact-info-card {
+        padding: 20px;
+    }
+
+    .contact-info-card h5 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .contact-info-card p {
+        font-size: 1rem;
+        color: #212529;
+    }
+
+    .contact-info-card a {
+        color: #F85C70;
+        text-decoration: none;
+    }
+
+    .contact-info-card a:hover {
+        color: #f51330;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 991.98px) {
+        .contact {
+            padding: 60px 0;
+        }
+
+        .contact-form-card {
+            padding: 25px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contact-form-card {
+            padding: 20px;
+        }
+
+        .contact-form-card .btn-primary {
+            padding: 10px;
+        }
+
+        .contact-info-card h5 {
+            font-size: 1.1rem;
+        }
+
+        .contact-info-card p {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
+	
+
+    <footer class="footer" style="background: #c2c2c2; color: #333333; padding: 20px 0; text-align: center; font-family: 'Source Sans Pro', sans-serif;">
+        <div class="container">
+            <img src="assets/imgs/DM.webp" alt="DM Logo" class="footer-logo" style="max-width: 200px; height: auto; margin-bottom: 15px; border-radius: 5px;">
+            <p class="footer-text" style="font-size: 1.0rem; margin-bottom: 10px;">STEALTH EYE: BEHAVIORAL ANALYSIS SYSTEM FOR FILELESS MALWARE DETECTION</p>
+            <p class="footer-text" style="font-size: 0.9rem; margin-bottom: 10px;">Email: stealtheye@gmail.com | Proudly present by team Stealth Eye</p>
+            <p class="footer-text" style="font-size: 0.8rem; margin-bottom: 10px;">© 2025 Stealth Eye. All rights reserved. | May 20, 2025</p>
+        </div>
+    </footer>
+
+    <style>
+    .footer-logo {
+        transition: transform 0.3s ease;
+        animation: logoPulse 2s infinite ease-in-out;
+    }
+
+    .footer-logo:hover {
+        transform: scale(1.05);
+    }
+
+    .footer-text {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes logoPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @media (max-width: 767.98px) {
+        .footer-logo {
+            max-width: 100px;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    </style>
+</body>
+</html>
